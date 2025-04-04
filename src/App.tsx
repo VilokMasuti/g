@@ -38,7 +38,7 @@ const collectionsData = [
   },
 ];
 
-const Index = () => {
+const App = () => {
   const [activeTab, setActiveTab] = useState('collections');
   const [scrollY, setScrollY] = useState(0);
 
@@ -60,11 +60,13 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-start bg-black text-white">
-      <div className="relative  w-full max-w-md mx-auto">
+      <div className="relative w-full max-w-md mx-auto">
         {/* Header section with patterned background */}
         <div
           className="relative overflow-hidden"
-          style={{ backgroundColor: '#0E0520' }}
+          style={{
+            background: 'linear-gradient(180deg, #27024D 0%, #101216 100%)',
+          }}
         >
           {/* Animated Pattern Background - only behind the header */}
           <div
@@ -81,7 +83,7 @@ const Index = () => {
         {/* Content Container - black background */}
         <div className="w-full bg-black min-h-screen flex flex-col">
           {/* Tabs Navigation */}
-          <div className="px-6">
+          <div>
             <ProfileTabs onTabChange={setActiveTab} />
           </div>
 
@@ -102,4 +104,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default App;

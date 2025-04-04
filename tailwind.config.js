@@ -45,12 +45,19 @@ export default {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
-        glitch: {
-          bg: '#0E0520',
-          dark: '#181820',
-          accent: '#0AE8B3',
-          muted: '#333339',
-          panel: '#1F1F25',
+    glitch: {
+					'dark': '#0E0520',
+					'darker': '#080213',
+					'black': '#000000',
+					'accent': '#00FFAA',
+					'accent-hover': '#00CC88',
+					'secondary': '#9b87f5',
+					'panel': '#101010',
+					'purple': {
+						'light': '#432874',
+						'medium': '#27024D',
+						'dark': '#101216'
+					}
         },
         sidebar: {
           DEFAULT: 'hsl(var(--sidebar-background))',
@@ -86,6 +93,11 @@ export default {
           '100%': { opacity: '1' },
         },
       },
+      'glitch': {
+					'0%, 100%': { transform: 'translate(0)' },
+					'33%': { transform: 'translate(-5px, 3px)' },
+					'66%': { transform: 'translate(5px, -3px)' }
+				},
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
